@@ -1,0 +1,145 @@
+
+
+.sign{
+    /* Background part */
+    
+    position: absolute; 
+    width: 100%;
+    height: 110%;
+    background-image: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/bg-vector.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    justify-content: center;
+
+
+}
+.h3{
+    font-family: 'Montserrat';
+}
+
+.pick{
+    /* Signup title */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    
+} 
+
+.box {
+    /* Box part */
+    background-color: #54B56A;
+    width: 500px;
+    position: absolute;
+    left: 35%;
+    padding: 10px;
+    top: 10%;
+    border-radius: 10px;
+    font-family: 'Montserrat';
+
+    color: #fff;
+
+mix-blend-mode: normal;
+border: 4px solid #CBE9FF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+width:40%;
+
+    ;
+}
+
+.link{
+    /* already signup */
+    font-family: 'Montserrat';
+    font-style: bold;
+    font-weight: 700;
+    font-size: 1.52rem;
+    line-height: 120%;
+    display: flex;
+    justify-content: center;
+    text-align: center; 
+    color: #fff;
+    width: 100%;
+    margin-top:6%;
+    text-decoration: none;
+    
+    
+}
+
+.box .inputBox label {
+/* email,name,password -title */
+font-family: 'Montserrat';
+font-style: normal;
+font-weight: 700;
+font-size: 1.875rem;
+line-height: 111%;
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: -0.04em;
+
+color: #CBE9FF;
+
+
+}
+
+
+.box .inputBox input {
+    /* inputpart for email-password-name */
+    background: transparent;
+    font-family: 'Montserrat';
+    font-size: 1.35rem;
+    color: rgb(118, 113, 113);
+    border: 5px #606f69;
+    width: 100%;
+    padding: 10px;
+    
+    margin: 5px 0 22px 0;
+    display: inline-block;
+  
+    color: #fff;
+background: #04AA6D;
+mix-blend-mode: normal;
+border: 4px solid #CBE9FF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 10px;
+    
+}
+
+
+.box input[type="submit"], .box button[type="submit"], a.button {
+    /* signup button */
+font-family: 'Montserrat';
+margin: auto;
+padding: 2.7%;
+    
+
+font-weight: 700;
+font-size: 1.5rem;
+align-items: center;
+text-align: center;
+display: flex;
+color: #fff;
+background: #04AA6D;
+mix-blend-mode: normal;
+border: 4px solid #CBE9FF;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+width:40%;
+justify-content: center;
+
+
+
+    
+}
+
+.box input[type="submit"]:hover, .box button[type="submit"]:hover, a.button:hover {
+    opacity: 0.8;
+
+
+}
+@media only screen and (max-width:500px){
+
+    
+}

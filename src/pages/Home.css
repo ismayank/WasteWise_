@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+
+.home{
+    display: flex;
+    flex-direction:column;
+    margin:2px;
+    margin-top: 3px;
+
+    background-image: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/images-bg.jpg");
+    backface-visibility: visible;
+
+
+     font-family: 'Montserrat';
+       font-size: 22px;
+       scroll-behavior: smooth;
+       background-color: azure;
+       width: 100%;
+       height: 100vh;
+       background-color: azure;
+       position: relative;
+       font-family: 'Montserrat';
+       
+    }
+    .menu
+    {
+       display: flex;
+      justify-content: space-around;
+      background-color: #54B56A;
+       
+    }
+    .menu a{
+        font-size: 16px;
+        font-weight: bolder;
+        color:white;
+        text-decoration: none;
+         
+    }
+    .ds{
+       display: flex;
+    flex-direction:column;
+    margin-top: 25px;;
+     font-family: 'Montserrat';
+       font-size: 17px;
+    }
+    
+@media only screen and (max-width: 550px) {
+    .menu
+    {
+       display: flex;
+      justify-content: space-around;
+      background-color: #b55454;
+       
+    }
+    .menu a{
+        font-size: 16px;
+        font-weight: bolder;
+        color:white;
+        text-decoration: none;}
+         
+
+}
