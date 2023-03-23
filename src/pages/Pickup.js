@@ -3,6 +3,7 @@ import './Pickup.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import pickt from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pick1.jpeg';
 
 
 
@@ -31,11 +32,13 @@ const handlechange = () =>
     return (
 
         <><div className="sign">
-            
+            <img className='img1r' src={pickt} alt='logo1' />
         </div><div>
                 <main className="box">
+
                     <form>
                     <h3 className="pick">Pickup Details</h3>
+
                         <div className="inputBox">
                             <label htmlFor="Name">Name</label>
                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
@@ -53,6 +56,7 @@ const handlechange = () =>
         
                     </form>
                 </main>
+                
             </div></>
         
     );

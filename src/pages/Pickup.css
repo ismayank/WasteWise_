@@ -6,13 +6,21 @@
     position: absolute; 
     width: 100%;
     height: 110%;
-    background-image: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/bg-vector.png");
+    background-image: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/images-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover; 
     justify-content: center;
 
 
 }
+.img1r {
+    position: absolute;
+    bottom:4px;
+    right: 9px;
+   
+    width: 30%;
+
+  }
 .h3{
     font-family: 'Montserrat';
 }
