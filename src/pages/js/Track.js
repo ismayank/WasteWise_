@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Aboutus.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Track.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
