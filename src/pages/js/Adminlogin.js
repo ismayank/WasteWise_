@@ -1,12 +1,12 @@
 import React,{ useState } from 'react';
-import './Pickup.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Pickup.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
 
-
-function Track() {
+function Adminlogin() {
 
 const [name, setname] = useState('');
 const [ph_no, setph_no] = useState('');
@@ -31,11 +31,11 @@ const handlechange = () =>
     return (
 
         <><div className="sign">
-            
+            <img className='img7r' src={elogo} alt='logo1'/>
         </div><div>
                 <main className="box">
                     <form>
-                    <h3 className="pick">Track</h3>
+                    <h3 className="pick">Admin Login</h3>
                         <div className="inputBox">
                             <label htmlFor="Name">Name</label>
                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
@@ -47,7 +47,7 @@ const handlechange = () =>
 
                                 required />
                         </div>
-                        <button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button>
+                        <Link className="link" to="/Dbmenu"><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>  
 
                         <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
         
@@ -58,5 +58,5 @@ const handlechange = () =>
     );
 }
 
-export default Track;
+export default Adminlogin;
 

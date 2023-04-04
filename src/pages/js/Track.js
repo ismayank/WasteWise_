@@ -1,12 +1,11 @@
 import React,{ useState } from 'react';
-import './Pickup.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Aboutus.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
+import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-
-
-function Adminlogin() {
+function Track() {
 
 const [name, setname] = useState('');
 const [ph_no, setph_no] = useState('');
@@ -30,24 +29,25 @@ const handlechange = () =>
     
     return (
 
-        <><div className="sign">
+        <><div className="bgt">
+            <img className='img7r' src={elogo} alt='logo1'/>
             
         </div><div>
-                <main className="box">
+                <main className="box1">
                     <form>
-                    <h3 className="pick">Admin Login</h3>
-                        <div className="inputBox">
+                    <h3 className="pick1">Track</h3>
+                        <div className="inputBox1">
                             <label htmlFor="Name">Name</label>
                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
                                 required />
                         </div>
-                        <div className="inputBox">
+                        <div className="inputBox1">
                             <label htmlFor="phone"> Phone number</label>
                             <input type="phone" value={ph_no} onChange={(e) => setph_no(e.target.value)} name="phone no" id="phone no"
 
                                 required />
                         </div>
-                        <Link className="link" to="/Dbmenu"><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>  
+                        <button type="submit1" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button>
 
                         <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
         
@@ -58,5 +58,5 @@ const handlechange = () =>
     );
 }
 
-export default Adminlogin;
+export default Track;
 

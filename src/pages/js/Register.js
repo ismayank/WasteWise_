@@ -1,13 +1,11 @@
 import React,{ useState } from 'react';
-import './Pickup.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Pickup.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
-import pickt from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pick1.jpeg';
+import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-
-
-function Pickup() {
+function Register() {
 
 const [name, setname] = useState('');
 const [ph_no, setph_no] = useState('');
@@ -32,13 +30,11 @@ const handlechange = () =>
     return (
 
         <><div className="sign">
-            <img className='img1r' src={pickt} alt='logo1' />
+            <img className='img7r' src={elogo} alt='logo1'/>
         </div><div>
                 <main className="box">
-
                     <form>
-                    <h3 className="pick">Pickup Details</h3>
-
+                    <h3 className="pick">Register your Details</h3>
                         <div className="inputBox">
                             <label htmlFor="Name">Name</label>
                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
@@ -56,11 +52,10 @@ const handlechange = () =>
         
                     </form>
                 </main>
-                
             </div></>
         
     );
 }
 
-export default Pickup;
+export default Register;
 

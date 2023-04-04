@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import './Pickup.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Pickup.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
@@ -13,7 +13,7 @@ const [ph_no, setph_no] = useState('');
 
 const handlechange = () =>
 {if (name.length !== 0 &&ph_no.length !== 0 ) {
-    const url = 'http://localhost/add.php'
+    const url = 'http://localhost/update.php'
 
     let fData = new FormData();
     fData.append('name', name);
@@ -34,7 +34,7 @@ const handlechange = () =>
         </div><div>
                 <main className="box">
                     <form>
-                    <h3 className="pick">Register your Details</h3>
+                    <h3 className="pick">update your Details</h3>
                         <div className="inputBox">
                             <label htmlFor="Name">Name</label>
                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
@@ -48,7 +48,7 @@ const handlechange = () =>
                         </div>
                         <button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button>
 
-                        <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
+                        <Link className="link" to="/Dbmenu" style={{ float: "center" }}><span className="login-span">Back to Menu</span></Link>
         
                     </form>
                 </main>
