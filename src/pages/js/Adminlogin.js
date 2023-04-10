@@ -1,5 +1,5 @@
 import React,{ useState } from 'react';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Pickup.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Adminlogin.css';
 import {}from "react-router";
 import {Link} from "react-router-dom";
 import axios from 'axios';
@@ -14,7 +14,7 @@ const [ph_no, setph_no] = useState('');
 
 const handlechange = () =>
 {if (name.length !== 0 &&ph_no.length !== 0 ) {
-    const url = 'http://localhost/add.php'
+    const url = ''
 
     let fData = new FormData();
     fData.append('name', name);
@@ -31,9 +31,9 @@ const handlechange = () =>
     return (
 
         <><div className="sign">
-            <img className='img7r' src={elogo} alt='logo1'/>
+            <a href='/'> <img className='img7r' src={elogo} alt='logo1'/></a>
         </div><div>
-                <main className="box">
+                <main className="box3">
                     <form>
                     <h3 className="pick">Admin Login</h3>
                         <div className="inputBox">
@@ -47,9 +47,9 @@ const handlechange = () =>
 
                                 required />
                         </div>
-                        <Link className="link" to="/Dbmenu"><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>  
+                        <Link className="link1" to="/Dbmenu"><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>  
 
-                        <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
+                        <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
         
                     </form>
                 </main>

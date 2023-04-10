@@ -30,7 +30,8 @@ const handlechange = () =>
     return (
 
         <><div className="bgt">
-            <img className='img7r' src={elogo} alt='logo1'/>
+            <a href='/'> <img className='img7r' src={elogo} alt='logo1'/></a>
+           
             
         </div><div>
                 <main className="box1">

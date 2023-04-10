@@ -10,7 +10,7 @@
 .aim {
   display: flex;
   flex-direction: column;
-  margin-top: 15%;
+  margin-top: 17%;
   font-family: 'Montserrat';
   font-size: 19px;
 }
@@ -24,7 +24,7 @@
 
 .img1r {
   position: absolute;
-  top: 70%;
+  top: 78%;
   right: 2px;
   width: 33%;
 
@@ -32,7 +32,7 @@
 
 .img2r {
   position: absolute;
-  top: 37%;
+  top: 43%;
   left: 2px;
   width: 10%;
 
@@ -96,6 +96,11 @@
   font-weight: bolder;
   color: white;
   text-decoration: none;
+
+}
+
+.menu a:hover{
+  opacity: 0.8 ;
 
 }
 

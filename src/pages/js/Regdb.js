@@ -23,6 +23,8 @@ class Regdb extends Component {
                             <tr>
                                 <th style={{ height: '40px' }}>User name</th>
                                 <th>Phone No</th>
+                                <th>Email</th>
+                                <th>Password</th>
                                 
                             </tr>
                         </thead>
@@ -31,6 +33,8 @@ class Regdb extends Component {
                                 <tr key={index}>
                                     <td>{rs.name}</td>
                                     <td>{rs.ph_no}</td>
+                                    <td>{rs.email}</td>
+                                    <td>{rs.pass}</td>
                                  
                                 </tr>
                             ))}

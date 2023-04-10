@@ -13,10 +13,12 @@ function Home() {
             <div class="menu">
 
                 <a href="/Pickup">Pickup Schedule</a>
-                <a href="/Track"> Track </a>
-                <a href="/Register"> Register</a>
+                <a href="/Track">Track</a>
+                <a href="/Register"> Register </a>
+                <a href="/User">User login</a>
                 <a href="/Adminlogin">Admin Login</a>
                 <a href="/AboutUs">About Us</a>
+               
 
                 <img className='img1r' src={mind} alt='logo1' />
                 <img className='img2r' src={aim} alt='logo1' />

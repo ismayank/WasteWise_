@@ -1,21 +1,24 @@
 import React from 'react';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Pickup.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Aboutus.css';
 import {}from "react-router";
 import mte from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/mte.png';
+import wm from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-OBJECTS.svg';
 function Aboutus() {
    
 return(
     <>
     <div class="main">
+      
 
      <img className='imgr1' src={mte} alt='logo'/>
+     <img className='imgr2' src={wm} alt='logo'/>
         <div class="card">
         <div class="card-info">
         <div class="card-avatar">
           {/* <img className='imgr' src={elogo} alt='logo1'/> */}
         </div>
-        <div class="card-title">Mayank Singh</div>
-        <div class="card-subtitle"> Founder</div>
+        <div class="card-title">MAYANK SINGH</div>
+        <div class="card-subtitle"> FOUNDER </div>
         </div>
         <ul class="card-social">
         <li class="card-social__item">
@@ -41,7 +44,7 @@ return(
 <div class="card2">
         <div class="card2-info">
         <div class="card2-avatar"></div>
-        <div class="card2-title">Anushka Sharma</div>
+        <div class="card2-title">ANUSHKA SHARMA</div>
         <div class="card2-subtitle"> Sasti Engineer</div>
         </div>
         <ul class="card2-social">
@@ -70,7 +73,7 @@ return(
         <div class="card3-avatar">
           {/* <img className='imgr' src={elogo} alt='logo1'/> */}
         </div>
-        <div class="card3-title">Yasraj Dhal</div>
+        <div class="card3-title">YASRAJ DHAL</div>
         <div class="card3-subtitle"> Magia Engineer</div>
         </div>
         <ul class="card3-social">
