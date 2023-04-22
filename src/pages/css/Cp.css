@@ -39,11 +39,13 @@
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
     color: #FFFFFF;
-    margin-top: 18%;
+    margin-top: 15%;
     margin-bottom: 14%;
+    margin-left: 10%;
     justify-content: center;
+    
 }
 
 .box4 {

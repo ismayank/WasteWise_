@@ -5,17 +5,21 @@ import mind from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/
 import aim from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/aim.png';
 import leaf from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/leaf.png';
 import road from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/road.svg';
+import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
+import Footer from "./Footer";
+
 
 function Home() {
     return (
         <div className='home'>
-            <h1 class="he">WasteWise</h1>
-            <div class="menu">
+            <h2 className="he"> WasteWise </h2>
+            <a href='/'> <img className='imgh' src={elogo} alt='logo1'/></a>
+            <div className="menu">
 
-                <a href="/Pickup">Pickup Schedule</a>
+                <a href="/Order">Products</a>
                 <a href="/Track">Track</a>
                 <a href="/Register"> Register </a>
-                <a href="/User">User login</a>
+                <a href="/Login">User login</a>
                 <a href="/Adminlogin">Admin Login</a>
                 <a href="/AboutUs">About Us</a>
                
@@ -26,17 +30,18 @@ function Home() {
                 <img className='img4r' src={road} alt='logo1' />
            
             </div>
-            <p1 class="ds"> Recycling management is a crucial aspect of environmental sustainability.
+            <p className="ds"> Recycling management is a crucial aspect of environmental sustainability.
                 Recycling helps conserve natural resources, reduce greenhouse gas emissions, and decrease landfill waste.
-                As a responsible citizen, it is important to make recycling a part of our daily routine.</p1>
-            <p2 class="ds">Our website offers a convenient garbage pickup scheduling and tracking feature. 
+                As a responsible citizen, it is important to make recycling a part of our daily routine.</p>
+            <p className="ds">Our website offers a convenient garbage pickup scheduling and tracking feature. 
             We understand that managing waste can be challenging, especially for busy households and businesses. 
-            That's why we've made it easy to schedule pickups and track your waste management activity.</p2>
-            <p3 class="aim">The aim of this project is to establish an integrated waste management system that effectively collects</p3>
-            <p4 class="aim2"> separates, treats, and disposes of garbage waste from various sectors in an environmentally sustainable manner.</p4> 
-            
-        </div>
+            That's why we've made it easy to schedule pickups and track your waste management activity.</p>
+            <p className="aim">The aim of this project is to establish an integrated waste management system that effectively collects</p>
+            <p className="aim2"> separates, treats, and disposes of garbage waste from various sectors in an environmentally sustainable manner.</p> 
 
+            <Footer /> {/* Add the Footer component at the bottom of the page */}
+        </div>
     );
 }
-export default Home
+
+export default Home;

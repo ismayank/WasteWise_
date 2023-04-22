@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import axios from 'axios';
 import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-function Cp1() {
+function Cp2() {
 
     
     return (
@@ -16,7 +16,7 @@ function Cp1() {
         </div><div>
                 <main className="box4">
                 <form>
-                    <h3 className="pick2">Pickup Scheduled Successfully.</h3>
+                    <h3 className="pick2">Payment Successful.</h3>
                       
 
                         {/* <Link className="link2" to="/Track" style={{ float: "center" }}><span className="login-span">Track Now</span></Link>  */}
@@ -29,5 +29,5 @@ function Cp1() {
     );
 }
 
-export default Cp1;
+export default Cp2;
 

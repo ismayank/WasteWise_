@@ -6,6 +6,8 @@
 .he{
   font-family: 'Montserrat';
   font-size: 4rem;
+  margin-left: 6.5%;
+  
 }
 .aim {
   display: flex;
@@ -20,6 +22,25 @@
   flex-direction: column;
   font-family: 'Montserrat';
   font-size: 19px;
+}
+.imgh {
+  position: absolute;
+  top: 0.6%;
+  left: 1%;
+
+  width: 5%;
+
+  transition: transform .2s;
+  /* Animation */
+  transform: rotate(45deg);
+  transition-duration: 0.8s;
+
+}
+
+.imgh:hover {
+  transform: scale(1.2);
+
+
 }
 
 .img1r {
@@ -43,6 +64,17 @@
   top: 37%;
   left: 13%;
   width: 7%;
+  transition: transform .2s;
+  /* Animation */
+  transform: rotate(345deg);
+  transition-duration: 0.8s;
+
+}
+
+
+.img3r:hover {
+  transform: scale(1.2);
+
 
 }
 

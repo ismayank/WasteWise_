@@ -10,9 +10,20 @@ import Dbmenu from "./pages/js/Dbmenu";
 import Eddb from "./pages/js/Eddb";
 import Updb from "./pages/js/Updb";
 import Pickdb from "./pages/js/Pickdb";
-import User from "./pages/js/User";
 import Cp1 from "./pages/js/Cp1";
 import Cp2 from "./pages/js/Cp2";
+import Dash from "./pages/js/Dash";
+import Login from "./pages/js/Login";
+import Cate from "./pages/js/Cate";
+import Dom from "./pages/js/Categories/Dom";
+import Agri from "./pages/js/Categories/Agri";
+import Health from "./pages/js/Categories/Health";
+import Ind from "./pages/js/Categories/Ind";
+import Comm from "./pages/js/Categories/Comm";
+import Pay from "./pages/js/Pay";
+import Footer from "./pages/js/Footer";
+import Order from "./pages/js/Order";
+
 
 function App() {
 return(
@@ -30,9 +41,22 @@ return(
       <Route path="/Eddb" element={<Eddb />} />
       <Route path="/Updb" element={<Updb />} />
       <Route path="/Pickdb" element={<Pickdb/>} />
-      <Route path="/User" element={<User/>} />
+      <Route path="/Login" element={<Login/>} />
       <Route path="/Cp1" element={<Cp1/>} />
       <Route path="/Cp2" element={<Cp2/>} />
+      <Route path="/Dash" element={<Dash/>} />
+      <Route path="/Cate" element={<Cate/>} />
+      <Route path="/Dom" element={<Dom/>} />
+      <Route path="/Agri" element={<Agri />} />
+      <Route path="/Health" element={<Health/>} />
+      <Route path="/Ind" element={<Ind />} />
+      <Route path="/Comm" element={<Comm/>} />
+      <Route path="/Pay" element={<Pay/>} />
+      <Route path="/Footer" element={<Footer/>}/>
+      <Route path="/Order" element={<Order/>}/>
+      
+
+
       </Routes>
       </BrowserRouter>
 

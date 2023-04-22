@@ -64,9 +64,9 @@ function Pickup() {
 
 
 
-                        <Link classname="Link" to="/Cp2" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
+                        <Link classname="Link1" to="/Cate" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
 
-                        <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
+                        <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
 
                     </form>
                 </main>

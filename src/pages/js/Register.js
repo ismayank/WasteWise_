@@ -61,9 +61,9 @@ function Register() {
 
                                 required />
                         </div>
-                        <Link classname="Link" to="/Cp1" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Register</button></Link>
+                        <Link classname="Link1" to="/Cp1" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Register</button></Link>
 
-                        <Link className="link" to="/User" style={{ float: "center" }}><span className="login-span">Already have an account</span></Link>
+                        <Link className="link1" to="/User" style={{ float: "center" }}><span className="login-span">Already have an account</span></Link>
         
                     </form>
                 </main>

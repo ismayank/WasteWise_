@@ -18,7 +18,7 @@ return(
           {/* <img className='imgr' src={elogo} alt='logo1'/> */}
         </div>
         <div class="card-title">MAYANK SINGH</div>
-        <div class="card-subtitle"> FOUNDER </div>
+        <div class="card-subtitle"> 210953136 </div>
         </div>
         <ul class="card-social">
         <li class="card-social__item">
@@ -45,7 +45,7 @@ return(
         <div class="card2-info">
         <div class="card2-avatar"></div>
         <div class="card2-title">ANUSHKA SHARMA</div>
-        <div class="card2-subtitle"> Sasti Engineer</div>
+        <div class="card2-subtitle">210953128</div>
         </div>
         <ul class="card2-social">
         <li class="card2-social__item">
@@ -74,7 +74,7 @@ return(
           {/* <img className='imgr' src={elogo} alt='logo1'/> */}
         </div>
         <div class="card3-title">YASRAJ DHAL</div>
-        <div class="card3-subtitle"> Magia Engineer</div>
+        <div class="card3-subtitle">210953064</div>
         </div>
         <ul class="card3-social">
         <li class="card3-social__item">

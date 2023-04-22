@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import axios from 'axios';
 import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-function User() {
+function Login() {
 
 const [name, setname] = useState('');
 const [pass, setpass] = useState('');
@@ -35,7 +35,7 @@ const handlechange = () =>
                     <form>
                     <h3 className="pick">Login your Details</h3>
                         <div className="inputBox">
-                            <label htmlFor="Name">User Email </label>
+                            <label htmlFor="Name">Email </label>
                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
                                 required />
                         </div>
@@ -46,7 +46,7 @@ const handlechange = () =>
 
                                 required />
                         </div>
-                        <button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Login</button>
+                        <Link className='link' to ='/Dash'><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Login</button></Link>
 
                         <Link className="link" to="/Register" style={{ float: "center" }}><span className="login-span">Don't have an account?</span></Link>
         
@@ -57,5 +57,5 @@ const handlechange = () =>
     );
 }
 
-export default User;
+export default Login;
 

@@ -1,0 +1,23 @@
+.pc1{
+    font-family: 'Montserrat';
+    font-size: 2rem;
+  margin : 2%;
+  text-decoration: none;
+  color: green;
+  white-space: pre;
+  
+
+}
+.pc1::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.tp{
+
+    font-family: 'Montserrat';
+    font-size: 2rem;
+  margin : 2%;
+  text-decoration: none;
+  color:rgb(10, 8, 8);
+}
