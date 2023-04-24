@@ -24,6 +24,7 @@ class Pickdb extends Component {
                                 <th style={{ height: '40px' }}>User name</th>
                                 <th>Phone No</th>
                                 <th>Address</th>
+                                <th> Date</th>
                                 
                             </tr>
                         </thead>
@@ -33,6 +34,7 @@ class Pickdb extends Component {
                                     <td>{rs.name}</td>
                                     <td>{rs.phno}</td>
                                     <td>{rs.add}</td>
+                                    <td>{rs.date}</td>
                                  
                                 </tr>
                             ))}

@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Pickup.css';
-import { Link } from "react-router-dom";
-import { } from "react-router";
-import pickt from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-Group.svg';
-import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
+import React,{ useState } from 'react';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/User.css';
+import {}from "react-router";
+import {Link} from "react-router-dom";
 import axios from 'axios';
+import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-function Pickup() {
+function Userin() {
 
     const [name, setname] = useState('');
     const [phno, setphno] = useState('');
@@ -16,7 +15,7 @@ function Pickup() {
 
     const handlechange = () => {
         if (name.length !== 0 && phno.length !== 0 && add.length !== 0 && date.length != 0) {
-            const url = 'http://localhost/pickadd.php'
+            const url = 'http://localhost/deladd.php'
 
             let fData = new FormData();
             fData.append('name', name);
@@ -42,7 +41,7 @@ function Pickup() {
                 <main className="pbox">
 
                     <form>
-                        <h3 className="pick">Pickup Details</h3>
+                        <h3 className="pick">Enter Details for the delivery</h3>
 
                         <div className="inputBox">
                             <label htmlFor="Name">Name</label>
@@ -61,12 +60,12 @@ function Pickup() {
 
                                 required />
                         </div>
-                        <div className="inputBox">
+                        {/* <div className="inputBox">
                             <label htmlFor="date"> Date</label>
                             <input type="date" value={date} onChange={(e) => setdate(e.target.value)} name="date" id="date"
 
                                 required />
-                        </div>
+                        </div> */}
 
 
                      
@@ -77,17 +76,17 @@ function Pickup() {
 
 
 
-                        <Link classname="Link" to="/Cate" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
+                        <Link classname="Link" to="/Pay" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Pay</button></Link>
 
-                        <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
+                        {/* <Link className="link" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link> */}
 
                     </form>
                 </main>
 
             </div></>
-
     );
+
 }
 
-export default Pickup;
+export default Userin;
 

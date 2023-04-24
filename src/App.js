@@ -23,6 +23,12 @@ import Comm from "./pages/js/Categories/Comm";
 import Pay from "./pages/js/Pay";
 import Footer from "./pages/js/Footer";
 import Order from "./pages/js/Order";
+import Domshow from "./pages/js/Domshow";
+import Indshow from "./pages/js/Indshow";
+import Agrishow from "./pages/js/Agrishow";
+import Commshow from "./pages/js/Commshow";
+import Healthshow from "./pages/js/Healthshow";
+import Userin from "./pages/js/Userin";
 
 
 function App() {
@@ -54,6 +60,14 @@ return(
       <Route path="/Pay" element={<Pay/>} />
       <Route path="/Footer" element={<Footer/>}/>
       <Route path="/Order" element={<Order/>}/>
+      <Route path="/Domshow" element={<Domshow/>}/>
+      <Route path="/Indshow" element={<Indshow/>}/>
+      <Route path="/Agrishow" element={<Agrishow/>}/>
+      <Route path="/Commshow" element={<Commshow/>}/>
+      <Route path="/Healthshow" element={<Healthshow/>}/>
+      <Route path="/Userin" element={<Userin/>}/>
+
+      
       
 
 

@@ -1,32 +1,65 @@
 import React from 'react';
-import {}from "react-router";
-import './Home';
-import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Dbmenu.css';
+import { Link } from "react-router-dom";
+import '../css/Dbmenu.css'
+import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-
-function Dbmenu()
-{ return( 
-<div class="jumbotron">
-<a href='/'> <img className='imgr7' src={elogo} alt='logo1'/></a>
-  <h1 class="display-4">1.Signup Database</h1>
-  <p class="lead">In the Users application, you use the Database Access action to create database users.</p>
-  <p class="lead">
-    <a class="btn btn-success btn-lg" href="/Regdb" role="button">Show User datatbase</a>
-  </p>
-  <h1 class="display-4">2.Delete Database</h1>
-  <p class ="lead1">Edit Database </p>
-  <a class="btn btn-success btn-lg" href="/Eddb" role="button">delete User database</a>
-  <h1 class="display-4">3.Update Database</h1>
-  <p class ="lead1">Update Database </p>
-  <a class="btn btn-success btn-lg" href="/Updb" role="button">Update User database</a>
-  <h1 class="display-4">4.Pickup Database</h1>
-  <p class ="lead1">Pickup Database </p>
-  <a class="btn btn-success btn-lg" href="/Pickdb" role="button">Pickup user database</a>
-</div>
-
-
+function DatabaseMenu() {
+  return (
     
-);
+    <div className="dbmenu-container">
+      <h1 className='ad'>ADMIN PAGE</h1>
+      <Link to='/'>
+        <img className='logo' src={elogo} alt='logo'/>
+      </Link>
+      <div className="menu-items">
+        <div className="menu-item">
+          <h2 className="menu-item-title">1. Signup Database</h2>
+          <p className="menu-item-description">View user Database.</p>
+          <Link className="menu-item-button" to="/Regdb">View Database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">2. Delete Database</h2>
+          <p className="menu-item-description">Delete user Database</p>
+          <Link className="menu-item-button" to="/Eddb">Delete  Database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">3. Update Database</h2>
+          <p className="menu-item-description">Update User Database</p>
+          <Link className="menu-item-button" to="/Updb">Update User database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">4. Pickup Database</h2>
+          <p className="menu-item-description">Pickup Database</p>
+          <Link className="menu-item-button" to="/Pickdb"> View Pickup user database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">5. Domestic Database</h2>
+          <p className="menu-item-description">Domestic Database</p>
+          <Link className="menu-item-button" to="/Domshow">Domestic user database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">6. Agriculture Database</h2>
+          <p className="menu-item-description">Agriculture Database</p>
+          <Link className="menu-item-button" to="/Agrishow">Agriculture user database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">7. Industrial Database</h2>
+          <p className="menu-item-description">Industrial Database</p>
+          <Link className="menu-item-button" to="/Indshow">Industrial user database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">8. Commercial Database</h2>
+          <p className="menu-item-description">Commercial Database</p>
+          <Link className="menu-item-button" to="/Commshow">Commercial user database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">9. HealthCare Database</h2>
+          <p className="menu-item-description">HealthCare Database</p>
+          <Link className="menu-item-button" to="/Healthshow">HealthCare user database</Link>
+        </div>
+      </div>
+    </div>
+  );
 }
-export default Dbmenu
+
+export default DatabaseMenu;

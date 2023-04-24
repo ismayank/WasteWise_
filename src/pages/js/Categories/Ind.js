@@ -1,58 +1,120 @@
-import React,{ useState } from 'react';
+import React, { useState } from 'react';
 import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Cp.css';
-import {}from "react-router";
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Dom.css'
-import {Link} from "react-router-dom";
+import { } from "react-router";
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Ind.css'
+import { Link } from "react-router-dom";
 import axios from 'axios';
-import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
+import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-function Dom() {
+function Ind() {
 
-    
+
+
+    const [biodegradable, setbiodegradable] = useState('');
+    const [chemical, setchemical] = useState('');
+    const [textile, settextile] = useState('');
+    const [plastic, setplastic] = useState('');
+    const [ewaste, setewaste] = useState('');
+    const [metal, setmetal] = useState('');
+    const [glass, setglass] = useState('');
+    const [hazardous, sethazardous] = useState('');
+
+
+
+    const handlechange = () => {
+        if (biodegradable.length !== 0 && chemical.length !== 0 && textile.length !== 0 && plastic.length != 0 && ewaste.length != 0 && glass.length != 0 && hazardous.length != 0 ) {
+            const url = 'http://localhost/indadd.php'
+
+            let fData = new FormData();
+            fData.append('biodegradable', biodegradable);
+            fData.append('chemical', chemical);
+            fData.append('textile', textile);
+            fData.append('plastic', plastic);
+            fData.append('ewaste', ewaste);
+            fData.append('metal', metal);
+            fData.append('glass', glass);
+            fData.append('hazardous', hazardous);
+
+            axios.post(url, fData)
+                .then(response => alert(response.data))
+                .catch(error => alert(error));
+        }
+    }
+
+
+
+
+
+
     return (
 
         <><div className="bg">
             <h1 className='name1'>Industrial waste</h1>
-          
-            <a href='/'> <img className='img1' src={elogo} alt='logo1'/></a>
+
+            <a href='/'> <img className='img1' src={elogo} alt='logo1' /></a>
             <h2 className='name2'>Information </h2>
         </div><div>
-        <main className="dombox">
+                <main className="dombox2">
 
-<form>
-    <h3 className="pick">Enter the Weights(in Kilograms) </h3>
+                    <form>
+                        <h3 className="pick">Enter the Weights(in Kilograms) </h3>
 
-    <div className="inputBox">
-        <label htmlFor="Name">Food Waste</label>
-        <input type="text" name="Name" id="Name"
-            required />
-    </div>
-    <div className="inputBox">
-        <label htmlFor="Name">Plastic Waste</label>
-        <input type="text" name="Name" id="Name"
-            required />
-    </div>
-    <div className="inputBox">
-        <label htmlFor="Name">Textile Waste</label>
-        <input type="text" name="Name" id="Name"
-            required />
-    </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Biodegradable Waste</label>
+                            <input type="text" value={biodegradable} onChange={(e) => setbiodegradable(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Chemical Waste</label>
+                            <input type="text" value={chemical} onChange={(e) => setchemical(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Textile Waste</label>
+                            <input type="text" value={textile} onChange={(e) => settextile(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Plastic Waste</label>
+                            <input type="text" value={plastic} onChange={(e) => setplastic(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Metal Waste</label>
+                            <input type="text" value={metal} onChange={(e) => setmetal(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">E-Waste</label>
+                            <input type="text" value={ewaste} onChange={(e) => setewaste(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Glass Waste</label>
+                            <input type="text" value={glass} onChange={(e) => setglass(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
+                        <div className="inputBox">
+                            <label htmlFor="Name">Hazardous Waste</label>
+                            <input type="text" value={hazardous} onChange={(e) => sethazardous(e.target.value)} name="Name" id="Name"
+                                required />
+                        </div>
 
 
 
 
 
-    <Link classname="Link1" to="/Pay" ><button type="submit" name="" style={{ alignContent: "center" }}>Save</button></Link>
+                        <Link classname="Link1" to="/Pay" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
 
-    <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
+                        <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
 
-</form>
-</main>
-              
+                    </form>
+                </main>
+
             </div></>
-        
+
     );
 }
 
-export default Dom;
+export default Ind;
 

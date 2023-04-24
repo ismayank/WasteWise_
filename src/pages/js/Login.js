@@ -7,22 +7,30 @@ import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/
 
 function Login() {
 
-const [name, setname] = useState('');
+const [email, setemail] = useState('');
 const [pass, setpass] = useState('');
 
 
 const handlechange = () =>
-{if (name.length !== 0 &&pass.length !==0 ) {
-    const url = 'http://localhost/add.php'
+{if (email.length !== 0 &&pass.length !==0 ) {
+    const url = 'http://localhost/auth.php'
 
     let fData = new FormData();
-    fData.append('name', name);
+    fData.append('email', email);
     fData.append('pass', pass);
 
     axios.post(url, fData)
-        .then(response => alert(response.data))
-        .catch(error => alert(error));
+      .then(response => {
+        alert(response.data);
+        setemail('');
+        setpass('');
+      })
+      .catch(error => alert(error));
 }
+
+
+
+
 
 }
     
@@ -36,7 +44,7 @@ const handlechange = () =>
                     <h3 className="pick">Login your Details</h3>
                         <div className="inputBox">
                             <label htmlFor="Name">Email </label>
-                            <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
+                            <input type="email" value={email} onChange={(e) => setemail(e.target.value)} name="email" id="email"
                                 required />
                         </div>
                     

@@ -89,7 +89,7 @@ function Order() {
             <div>₹{total.toFixed(2)}</div>
           </div>
 
-          <Link className="Link" to="/Pay">
+          <Link className="Link" to="/Userin">
             <button className="btn">Place Your Order</button>
           </Link>
         </div>

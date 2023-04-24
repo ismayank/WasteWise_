@@ -8,16 +8,16 @@ import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/
 
 function Adminlogin() {
 
-const [name, setname] = useState('');
+const [email, setemail] = useState('');
 const [ph_no, setph_no] = useState('');
 
 
 const handlechange = () =>
-{if (name.length !== 0 &&ph_no.length !== 0 ) {
+{if (email.length !== 0 &&ph_no.length !== 0 ) {
     const url = ''
 
     let fData = new FormData();
-    fData.append('name', name);
+    fData.append('email', email);
     fData.append('ph_no', ph_no);
     
 
@@ -37,8 +37,8 @@ const handlechange = () =>
                     <form>
                     <h3 className="pick">Admin Login</h3>
                         <div className="inputBox">
-                            <label htmlFor="Name">Name</label>
-                            <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
+                            <label htmlFor="Name">Email</label>
+                            <input type="text" value={email} onChange={(e) => setemail(e.target.value)} name="email" id="email"
                                 required />
                         </div>
                         <div className="inputBox">

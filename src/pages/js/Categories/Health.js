@@ -1,12 +1,39 @@
 import React,{ useState } from 'react';
 import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Cp.css';
 import {}from "react-router";
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Dom.css'
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Health.css'
 import {Link} from "react-router-dom";
 import axios from 'axios';
 import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
-function Dom() {
+function Health() {
+
+    const [biomedical, setbiomedical] = useState('');
+    const [plastic, setplastic] = useState('');
+    const [chemical, setchemical] = useState('');
+    const [metal, setmetal] = useState('');
+    const [glass, setglass] = useState('');
+    
+    const handlechange = () => {
+        if (biomedical.length !== 0  && plastic.length !== 0 && chemical.length !== 0 && metal.length !== 0 && glass.length !== 0 ) {
+            const url = 'http://localhost/healthadd.php'
+
+            let fData = new FormData();
+            fData.append('biomedical', biomedical);
+            fData.append('plastic', plastic);
+            fData.append('chemical', chemical);
+            fData.append('metal', metal);
+            fData.append('glass', glass);
+           
+          
+            
+
+            axios.post(url, fData)
+                .then(response => alert(response.data))
+                .catch(error => alert(error));
+        }
+    }
+
 
     
     return (
@@ -17,32 +44,43 @@ function Dom() {
             <a href='/'> <img className='img1' src={elogo} alt='logo1'/></a>
             <h2 className='name2'>Information </h2>
         </div><div>
-        <main className="dombox">
+        <main className="dombox4">
 
 <form>
     <h3 className="pick">Enter the Weights(in Kilograms) </h3>
 
     <div className="inputBox">
-        <label htmlFor="Name">Food Waste</label>
-        <input type="text" name="Name" id="Name"
+        <label htmlFor="Name">Biomedical Waste</label>
+        <input type="text" value={biomedical} onChange={(e) => setbiomedical(e.target.value)} name="Name" id="Name"
             required />
     </div>
     <div className="inputBox">
         <label htmlFor="Name">Plastic Waste</label>
-        <input type="text" name="Name" id="Name"
+        <input type="text" value={plastic} onChange={(e) => setplastic(e.target.value)}name="Name" id="Name"
             required />
     </div>
     <div className="inputBox">
-        <label htmlFor="Name">Textile Waste</label>
-        <input type="text" name="Name" id="Name"
+        <label htmlFor="Name">Chemical Waste</label>
+        <input type="text" value={chemical} onChange={(e) => setchemical(e.target.value)} name="Name" id="Name"
             required />
     </div>
+    <div className="inputBox">
+        <label htmlFor="Name">Metal Waste</label>
+        <input type="text" value={metal} onChange={(e) => setmetal(e.target.value)} name="Name" id="Name"
+            required />
+    </div>
+    <div className="inputBox">
+        <label htmlFor="Name">Glass Waste</label>
+        <input type="text" value={glass} onChange={(e) => setglass(e.target.value)} name="Name" id="Name"
+            required />
+    </div>
+    
 
 
 
 
 
-    <Link classname="Link1" to="/Pay" ><button type="submit" name="" style={{ alignContent: "center" }}>Save</button></Link>
+    <Link classname="Link1" to="/Pay" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
 
     <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
 
@@ -54,5 +92,5 @@ function Dom() {
     );
 }
 
-export default Dom;
+export default Health;
 

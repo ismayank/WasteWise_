@@ -4,29 +4,50 @@
 
 
 .he{
+  /* font-family: 'Sunshiney'; */
   font-family: 'Montserrat';
   font-size: 4rem;
-  margin-left: 6.5%;
+  margin-left: 37.5%;
+  font-weight: 550;
   
+}
+.ds {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  ;
+  font-family: 'Mali';
+  font-weight: 700;
+  font-size: 19px;
 }
 .aim {
   display: flex;
   flex-direction: column;
   margin-top: 17%;
-  font-family: 'Montserrat';
+  font-family: 'Mali';
+  font-weight: 700;
   font-size: 19px;
 }
 
 .aim2 {
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat';
+  font-family: 'Mali';
+  font-weight: 700;
+  font-size: 19px;
+}
+.aim3 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Mali';
+  margin-top: 12%;
+  font-weight: 700;
   font-size: 19px;
 }
 .imgh {
   position: absolute;
   top: 0.6%;
-  left: 1%;
+  left: 32%;
 
   width: 5%;
 
@@ -110,7 +131,8 @@
   opacity: 1;
   z-index: -1;
   backface-visibility: visible;
-  font-family: 'Montserrat';
+  font-family: 'Mali';
+  font-weight: 9000;
   font-size: 22px;
   scroll-behavior: smooth;
 
@@ -136,14 +158,7 @@
 
 }
 
-.ds {
-  display: flex;
-  flex-direction: column;
-  margin-top: 25px;
-  ;
-  font-family: 'Montserrat';
-  font-size: 17px;
-}
+
 
 @media only screen and (max-width: 550px) {
   .menu {

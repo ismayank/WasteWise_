@@ -62,7 +62,7 @@
   
   }
 
-  .dombox {
+  .dombox3 {
     /* Box part */
     background-color: #54B56A;
    
@@ -80,7 +80,7 @@ border: 4px solid #CBE9FF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
 width: 35%;
-height: 132%;
+height: 103%;
 }
 
 .link{
@@ -101,7 +101,7 @@ height: 132%;
     
 }
 
-.dombox .inputBox label {
+.dombox3 .inputBox label {
 /* email,name,password -title */
 font-family: 'Montserrat';
 font-style: normal;
@@ -119,7 +119,7 @@ color: #FFFFFF;
 }
 
 
-.dombox .inputBox input {
+.dombox3 .inputBox input {
     /* inputpart for email-password-name */
     background: transparent;
     font-family: 'Montserrat';
@@ -140,7 +140,7 @@ border-radius: 10px;
 }
 
 
-.dombox input[type="submit"], .dombox button[type="submit"], a.button {
+.dombox3 input[type="submit"], .dombox3 button[type="submit"], a.button {
     /* signup button */
 font-family: 'Montserrat';
 margin: auto;
@@ -167,7 +167,7 @@ text-decoration: none;
     
 }
 
-.dombox input[type="submit"]:hover, .dombox button[type="submit"]:hover, a.button:hover {
+.dombox3 input[type="submit"]:hover, .dombox3 button[type="submit"]:hover, a.button:hover {
     opacity: 0.8;
 
 

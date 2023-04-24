@@ -36,7 +36,7 @@
 
 .bg {
 
-    background: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-bg.jpg") repeat-y center center/cover fixed;
+  background-image: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/bicycle-doodle-set-2D9Y49D.png");
   
     background-size: 100% 100%;
     background-repeat: no-repeat;
