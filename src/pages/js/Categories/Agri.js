@@ -9,10 +9,10 @@ import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/
 
 function Agri() {
 
-    const [crop, setcrop] = useState('');
-    const [livestock, setlivestock] = useState('');
-    const [plant, setplant] = useState('');
-    const [wood, setwood] = useState('');
+    const [crop, setcrop] = useState(0);
+    const [livestock, setlivestock] = useState(0);
+    const [plant, setplant] = useState(0);
+    const [wood, setwood] = useState(0);
     
     const handlechange = () => {
         if (crop.length !== 0  && livestock.length !== 0 && plant.length !== 0 && wood.length !== 0 ) {
@@ -42,7 +42,7 @@ function Agri() {
             <h1 className='name1'>Agriculture waste</h1>
           
             <a href='/'> <img className='img1' src={elogo} alt='logo1'/></a>
-            <h2 className='name2'>Information </h2>
+            {/* <h2 className='name2'>Information </h2> */}
         </div><div>
         <main className="dombox1">
 
@@ -70,22 +70,16 @@ function Agri() {
             required />
     </div>
     
+    <Link className="Link" to="/Pay" ><button type="submit" onClick={handlechange}  name="" style={{ alignContent: "center" }}>Save</button></Link>
 
-
-
-
-
-    <Link classname="Link" to="/Pay" ><button type="submit" onClick={handlechange}  name="" style={{ alignContent: "center" }}>Save</button></Link>
-
-    <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
+<Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
 
 </form>
 </main>
-              
-            </div></>
-        
-    );
+          
+        </div></>
+    
+);
 }
 
 export default Agri;
-

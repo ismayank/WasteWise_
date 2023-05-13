@@ -91,7 +91,6 @@ function Pickup() {
     return (
 
         <><div className="sign">
-            {/* <img className='img6r' src={pickt} alt='logo1' /> */}
             <a href='/'> <img className='img7r' src={elogo} alt='logo1'/></a>
         </div><div>
                 <main className="pbox">

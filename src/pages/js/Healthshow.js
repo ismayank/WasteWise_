@@ -21,9 +21,11 @@ class Healthshow extends Component {
   render() {
     return (
       <div className="table-responsive">
-        <table className="table table-striped table-bordered">
-          <thead>
-            <tr>
+        <h1 className='my-4'> HealthCare Waste Database</h1>
+                <table className="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Pickup Id</th>
               <th>Biomedical</th>
               <th>Plastic</th>
               <th>Chemical</th>
@@ -34,6 +36,7 @@ class Healthshow extends Component {
           <tbody>
             {this.state.healthcareData.map((healthcare, index) => (
               <tr key={index}>
+                <td>{healthcare.pid}</td>
                 <td>{healthcare.biomedical}</td>
                 <td>{healthcare.plastic}</td>
                 <td>{healthcare.chemical}</td>

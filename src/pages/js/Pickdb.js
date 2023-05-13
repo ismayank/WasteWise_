@@ -22,6 +22,7 @@ class Pickdb extends Component {
                         <thead className="thead-light">
                             <tr>
                                 <th style={{ height: '40px' }}>User name</th>
+                                <th>Pickup_id</th>
                                 <th>Phone No</th>
                                 <th>Address</th>
                                 <th> Date</th>
@@ -32,6 +33,7 @@ class Pickdb extends Component {
                             {this.state.pickup.map((rs, index) => (
                                 <tr key={index}>
                                     <td>{rs.name}</td>
+                                    <td>{rs.pid}</td>
                                     <td>{rs.phno}</td>
                                     <td>{rs.add}</td>
                                     <td>{rs.date}</td>

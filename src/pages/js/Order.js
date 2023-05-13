@@ -8,6 +8,13 @@ import productbox from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewis
 import shopbag from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/shopping-bag-2.png'
 import sealedbag from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/sealed-bag-2.png'
 import freightbox from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/freight-box-2.png'
+import trash from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/trashbag.png'
+import can from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/can.png'
+import tray from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/tray.png'
+import woodp from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/woodplate.png' 
+import glassb from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/glassbott.png'
+import eggc from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/eggcart.png'
+
 
 function Order() {
   const [items, setItems] = useState([
@@ -29,7 +36,36 @@ function Order() {
       price: 3,
       quantity: 0,
       image: sealedbag,
-    },]);
+    },
+     {
+      name: "Tray",
+      price: 8,
+      quantity: 0,
+      image: tray,
+    },
+    {
+      name: "Trash Bag",
+      price: 4,
+      quantity: 0,
+      image: trash,
+    },
+    {
+      name: "Wood Plate",
+      price: 29,
+      quantity: 0,
+      image: woodp,
+    },
+    
+   
+    {
+      name: "EggCart",
+      price: 4,
+      quantity: 0,
+      image: eggc,
+    },
+  
+  
+  ]);
 
   const subtotal = items.reduce(
     (acc, item) => acc + item.price * item.quantity,

@@ -21,9 +21,11 @@ class Commshow extends Component {
     render() {
         return (
             <div className="table-responsive">
+                <h1 className='my-4'> Commercial Waste Database</h1>
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>Pickup Id</th>
                             <th>Biodegradable</th>
                             <th>Chemical</th>
                             <th>Electrical</th>
@@ -33,6 +35,7 @@ class Commshow extends Component {
                     <tbody>
                         {this.state.commercialData.map((commercial, index) => (
                             <tr key={index}>
+                                <td>{commercial.pid}</td>
                                 <td>{commercial.biodegradable}</td>
                                 <td>{commercial.chemical}</td>
                                 <td>{commercial.electrical}</td>

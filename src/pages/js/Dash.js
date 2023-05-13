@@ -12,7 +12,9 @@ function Dash() {
     return (
 
         <><div className="bg">
-            <h1 className='name1'>HI MAYANK !</h1>
+            <h1 className='name1'>HI USER !</h1>
+            <p className='ds1'>Welcome to our comprehensive website where you can easily track your garbage collection,
+             schedule pickups, and explore our diverse range of products on our dedicated products page.</p>
 
             <a href='/'> <img className='imgl' src={elogo} alt='logo1' /></a>
             <a className='pc' href="/Pickup">Pickup Schedule</a>

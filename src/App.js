@@ -31,6 +31,11 @@ import Healthshow from "./pages/js/Healthshow";
 import Userin from "./pages/js/Userin";
 import Payment from "./pages/js/Payment";
 import LoginData from "./pages/js/LoginData";
+import Deliverysh from "./pages/js/Deliverysh";
+import Updpass from "./pages/js/Updpass";
+import Updphno from "./pages/js/Updphno";
+import Dlpick from "./pages/js/Dlpick";
+import Dlorder from "./pages/js/Dlorder";
 
 
 
@@ -71,9 +76,12 @@ return(
       <Route path="/Userin" element={<Userin/>}/>
       <Route path="/Payment" element={<Payment/>}/>
       <Route path="/LoginData" element={<LoginData/>}/>
-
-
-
+      <Route path="/Deliverysh" element={<Deliverysh/>}/>
+      <Route path="/Updpass" element={<Updpass/>}/>
+      <Route path="/Updphno" element={<Updphno/>}/>
+      <Route path="/Dlpick" element={<Dlpick/>}/>
+      <Route path="/Dlorder" element={<Dlorder/>}/>
+      
       
       
 

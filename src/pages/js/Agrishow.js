@@ -21,9 +21,11 @@ class Agrishow extends Component {
     render() {
         return (
             <div className="table-responsive">
+                 <h1 className='my-4'> Agriculture Waste Database</h1>
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>Pickup Id</th>
                             <th>Crop</th>
                             <th>Livestock</th>
                             <th>Plant</th>
@@ -33,6 +35,7 @@ class Agrishow extends Component {
                     <tbody>
                         {this.state.agrishow.map((agricultural, index) => (
                             <tr key={index}>
+                                <td>{agricultural.pid}</td>
                                 <td>{agricultural.crop}</td>
                                 <td>{agricultural.livestock}</td>
                                 <td>{agricultural.plant}</td>

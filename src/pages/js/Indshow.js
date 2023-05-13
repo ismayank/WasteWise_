@@ -21,9 +21,11 @@ class Indshow extends Component {
     render() {
         return (
             <div className="table-responsive">
+               <h1 className='my-4'> Agriculture Waste Database</h1>
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>Pickup Id</th>
                             <th>Biodegradable</th>
                             <th>Chemical</th>
                             <th>Textile</th>
@@ -37,6 +39,7 @@ class Indshow extends Component {
                     <tbody>
                         {this.state.indshow.map((industrial, index) => (
                             <tr key={index}>
+                                <td>{industrial.pid}</td>
                                 <td>{industrial.biodegradable}</td>
                                 <td>{industrial.chemical}</td>
                                 <td>{industrial.textile}</td>

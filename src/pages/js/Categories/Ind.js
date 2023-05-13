@@ -42,10 +42,6 @@ function Ind() {
     }
 
 
-
-
-
-
     return (
 
         <><div className="bg">

@@ -21,6 +21,7 @@ class Domshow extends Component {
     render() {
         return (
             <div className="table-responsive">
+                <h1 className='my-4'> Domestic Waste Database</h1>
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
