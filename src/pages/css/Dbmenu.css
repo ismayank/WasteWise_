@@ -5,6 +5,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+
+}
+
+.signn{
+  background: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-bg.jpg") repeat-y center center/cover fixed;
+
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow: auto;
+
 }
 
 .ad{

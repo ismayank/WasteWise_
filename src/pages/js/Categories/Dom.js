@@ -45,7 +45,7 @@ function Dom() {
             <h1 className='name1'>Domestic waste</h1>
           
             <a href='/'> <img className='img1' src={elogo} alt='logo1'/></a>
-            <h2 className='name2'>Information </h2>
+            {/* <h2 className='name2'>Information </h2> */}
         </div><div>
         <main className="dombox">
 

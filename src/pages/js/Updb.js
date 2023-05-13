@@ -1,63 +1,59 @@
-// import React,{ useState } from 'react';
-// import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Track.css';
-// import {}from "react-router";
-// import {Link} from "react-router-dom";
-// import axios from 'axios';
+import React, { useState } from 'react';
+import axios from 'axios';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Updb.css';
+import { Link } from "react-router-dom";
+import { } from "react-router";
+import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';// Import the CSS file for styling
+
+function Updb() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleUpdate = () => {
+    const url = 'http://localhost/update.php';
+
+    let formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+
+    axios.post(url, formData)
+      .then(response => alert(response.data))
+      .catch(error => alert(error));
+  };
+
+  return (
 
 
-// function Register() {
-
-// const [name, setname] = useState('');
-// const [ph_no, setph_no] = useState('');
-
-
-// const handlechange = () =>
-// {if (name.length !== 0 &&ph_no.length !== 0 ) {
-//     const url = 'http://localhost/update.php'
-
-//     let fData = new FormData();
-//     fData.append('name', name);
-//     fData.append('ph_no', ph_no);
+    <><div className="signt1">
     
+      <a href='/'> <img className='img7r' src={elogo} alt='logo1' /></a>
+    </div><div>
+        <main className="pbox2">
 
-//     axios.post(url, fData)
-//         .then(response => alert(response.data))
-//         .catch(error => alert(error));
-// }
+          <form>
+            <h3 className="pick">Update Details</h3>
 
-// }
-    
-//     return (
+            <div className='inputBox'>
+              <label htmlFor="name">Name:</label>
+              <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+            </div>
 
-//         <><div className="sign">
-            
-//         </div><div>
-//                 <main className="box">
-//                     <form>
-//                     <h3 className="pick">update your Details</h3>
-//                         <div className="inputBox">
-//                             <label htmlFor="Name">Name</label>
-//                             <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
-//                                 required />
-//                         </div>
-//                         <div className="inputBox">
-//                             <label htmlFor="phone"> Phone number</label>
-//                             <input type="phone" value={ph_no} onChange={(e) => setph_no(e.target.value)} name="phone no" id="phone no"
-
-//                                 required />
-//                         </div>
-//                         <button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button>
-
-//                         <Link className="link" to="/Dbmenu" style={{ float: "center" }}><span className="login-span">Back to Menu</span></Link>
+            <div className="inputBox">
+                            <label htmlFor="Name">Email iD</label>
+                            <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} name="email" id="email"
+                                required />
+                        </div>
         
-//                     </form>
-//                 </main>
-//             </div></>
-        
-//     );
-// }
+            <Link className='link' to ='/Dbmenu'><button type="submit" onClick={handleUpdate} name="" style={{ alignContent: "center" }}>Update Record</button></Link>
 
-// export default Register;
+          </form>
+        </main>
 
-function Register() {}
-export default Register;
+      </div></>
+
+
+   
+  );
+}
+
+export default Updb;

@@ -5,7 +5,7 @@ import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src
 
 function DatabaseMenu() {
   return (
-    
+    <div className='signn'>
     <div className="dbmenu-container">
       <h1 className='ad'>ADMIN PAGE</h1>
       <Link to='/'>
@@ -16,6 +16,11 @@ function DatabaseMenu() {
           <h2 className="menu-item-title">1. Signup Database</h2>
           <p className="menu-item-description">View user Database.</p>
           <Link className="menu-item-button" to="/Regdb">View Database</Link>
+        </div>
+        <div className="menu-item">
+          <h2 className="menu-item-title">1.1. Login Database</h2>
+          <p className="menu-item-description">View login Database</p>
+          <Link className="menu-item-button" to="/LoginData">View  Database</Link>
         </div>
         <div className="menu-item">
           <h2 className="menu-item-title">2. Delete Database</h2>
@@ -58,6 +63,7 @@ function DatabaseMenu() {
           <Link className="menu-item-button" to="/Healthshow">HealthCare user database</Link>
         </div>
       </div>
+    </div>
     </div>
   );
 }

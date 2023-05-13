@@ -1,34 +1,35 @@
-
-
 import React, { useState } from "react";
+import GooglePayButton from '@google-pay/button-react';
 import "/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Order.css";
 import { Link } from "react-router-dom";
 import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
-import plasticImage from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/Plas.jpg';
-import metalImage from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/metal.jpg';
-import glassImage from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/gl1.jpg';
+import axios from "axios";
+import productbox from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/productbox.png'
+import shopbag from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/shopping-bag-2.png'
+import sealedbag from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/sealed-bag-2.png'
+import freightbox from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/freight-box-2.png'
 
 function Order() {
   const [items, setItems] = useState([
+
     {
-      name: "Recycled Plastic Granules (in kg)",
-      price: 105,
+      name: "Product Box",
+      price: 7,
       quantity: 0,
-      image: plasticImage,
+      image: productbox,
     },
     {
-      name: "Recycled Metal Granules (in kg)",
-      price: 203,
+      name: "Shopping Bag",
+      price: 4,
       quantity: 0,
-      image: metalImage,
+      image: shopbag,
     },
     {
-      name: "Recycled glass Granules (in kg)",
-      price: 305,
+      name: "Sealed Bag ",
+      price: 3,
       quantity: 0,
-      image: glassImage,
-    },
-  ]);
+      image: sealedbag,
+    },]);
 
   const subtotal = items.reduce(
     (acc, item) => acc + item.price * item.quantity,
@@ -42,6 +43,39 @@ function Order() {
     newItems[index].quantity = quantity;
     setItems(newItems);
   };
+  const handlePlaceOrder = () => {
+    const orderData = {
+      items: items.map((item) => ({
+        name: item.name,
+        quantity: item.quantity,
+        total: item.price * item.quantity,
+      })),
+      subtotal,
+      tax,
+      total,
+    };
+
+    const url = 'http://localhost//order.php';
+    const formData = new FormData();
+    formData.append('subtotal', subtotal);
+    formData.append('total', total);
+  
+    // Send orderData to the server using an HTTP request
+    axios
+      .post(url, formData)
+      .then((response) => {
+        console.log(response.data);
+        // Handle the response from the server if needed
+      })
+      .catch((error) => {
+        console.error(error);
+        // Handle any errors that occurred during the request
+      });
+  
+    // Reset the quantity of items to 0
+    const resetItems = items.map((item) => ({ ...item, quantity: 0 }));
+    setItems(resetItems);
+  };
 
   return (
     <>
@@ -54,11 +88,11 @@ function Order() {
           <ul className="order-items-list">
             {items.map((item, index) => (
               <li key={index} className="order-item">
-                 <div className="order-item-image">
+                <div className="order-item-image">
                   <img className="imgs" src={item.image} alt={item.name} />
                 </div>
                 <div className="order-item-name">{item.name}</div>
-               
+
                 <div className="order-item-quantity">
                   <input
                     type="number"
@@ -89,9 +123,68 @@ function Order() {
             <div>₹{total.toFixed(2)}</div>
           </div>
 
-          <Link className="Link" to="/Userin">
-            <button className="btn">Place Your Order</button>
+          <GooglePayButton
+environment="TEST"
+paymentRequest={{
+  apiVersion: 2,
+  apiVersionMinor: 0,
+  allowedPaymentMethods: [
+    {
+      type: 'CARD',
+      parameters: {
+        allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+        allowedCardNetworks: ['MASTERCARD', 'VISA'],
+      },
+      tokenizationSpecification: {
+        type: 'PAYMENT_GATEWAY',
+        parameters: {
+          gateway: 'example',
+          gatewayMerchantId: 'exampleGatewayMerchantId',
+        },
+      },
+    },
+  ],
+  merchantInfo: {
+    merchantId: '12345678901234567890',
+    merchantName: 'WASTEWISE',
+  },
+  transactionInfo: {
+    totalPriceStatus: 'FINAL',
+    totalPriceLabel: 'Total',
+    totalPrice: '1',
+    currencyCode: 'INR',
+    countryCode: 'IN',
+  },
+  shippingAddressRequired: true,
+  callbackIntents: ['SHIPPING_ADDRESS', 'PAYMENT_AUTHORIZATION'],
+}}
+onLoadPaymentData={paymentRequest => {
+  console.log('Success', paymentRequest);
+}}
+onPaymentAuthorized={paymentData => {
+  console.log('Payment Authorised Success', paymentData)
+  return { transactionState: 'SUCCESS' }
+}
+}
+onPaymentDataChanged={paymentData => {
+  console.log('On Payment Data Changed', paymentData)
+  return {}
+}
+}
+existingPaymentMethodRequired='false'
+buttonColor='black'
+buttonType='Buy'
+/> 
+
+  
+             <Link className="Link" to="/Userin">
+          <button className="btn" onClick={handlePlaceOrder}>Place Your Order</button>
           </Link>
+
+
+
+
+
         </div>
       </div>
     </>

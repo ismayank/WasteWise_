@@ -2,8 +2,6 @@ import React,{ useState } from 'react';
 import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Cp.css';
 import {}from "react-router";
 import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Cate.css'
-import {Link} from "react-router-dom";
-import axios from 'axios';
 import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
 function Cate() {
@@ -24,8 +22,15 @@ function Cate() {
             <a className='pc1' href="/Cp2"> Pay Later</a>
 
         </div><div>
+
               
-            </div></>
+            </div>
+
+
+            
+            
+            
+            </>
         
     );
 }

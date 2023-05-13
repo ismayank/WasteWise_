@@ -24,6 +24,7 @@ class Domshow extends Component {
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
+                            <th>Pickup Id</th>
                             <th>Food</th>
                             <th>Plastic</th>
                             <th>Textile</th>
@@ -35,6 +36,7 @@ class Domshow extends Component {
                     <tbody>
                         {this.state.dmshow.map((domestic, index) => (
                             <tr key={index}>
+                                <td>{domestic.pid}</td>
                                 <td>{domestic.food}</td>
                                 <td>{domestic.plastic}</td>
                                 <td>{domestic.textile}</td>

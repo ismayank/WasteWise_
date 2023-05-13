@@ -16,8 +16,8 @@ function Home() {
             <a href='/'> <img className='imgh' src={elogo} alt='logo1' /></a>
             <div className="menu">
 
-                <a href="/Order">Products</a>
-                <a href="/Track">Track</a>
+                {/* <a href="/Order">Products</a>
+                <a href="/Track">Track</a> */}
                 <a href="/Register"> Register </a>
                 <a href="/Login">User login</a>
                 <a href="/Adminlogin">Admin Login</a>

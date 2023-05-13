@@ -29,6 +29,9 @@ import Agrishow from "./pages/js/Agrishow";
 import Commshow from "./pages/js/Commshow";
 import Healthshow from "./pages/js/Healthshow";
 import Userin from "./pages/js/Userin";
+import Payment from "./pages/js/Payment";
+import LoginData from "./pages/js/LoginData";
+
 
 
 function App() {
@@ -66,6 +69,10 @@ return(
       <Route path="/Commshow" element={<Commshow/>}/>
       <Route path="/Healthshow" element={<Healthshow/>}/>
       <Route path="/Userin" element={<Userin/>}/>
+      <Route path="/Payment" element={<Payment/>}/>
+      <Route path="/LoginData" element={<LoginData/>}/>
+
+
 
       
       

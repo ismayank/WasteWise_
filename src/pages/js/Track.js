@@ -8,16 +8,16 @@ import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/
 function Track() {
 
 const [name, setname] = useState('');
-const [ph_no, setph_no] = useState('');
+const [phno, setphno] = useState('');
 
 
 const handlechange = () =>
-{if (name.length !== 0 &&ph_no.length !== 0 ) {
-    const url = 'http://localhost/add.php'
+{if (name.length !== 0 &&phno.length !== 0 ) {
+    const url = 'http://localhost/pict.php'
 
     let fData = new FormData();
     fData.append('name', name);
-    fData.append('ph_no', ph_no);
+    fData.append('phno', phno);
     
 
     axios.post(url, fData)
@@ -44,7 +44,7 @@ const handlechange = () =>
                         </div>
                         <div className="inputBox1">
                             <label htmlFor="phone"> Phone number</label>
-                            <input type="phone" value={ph_no} onChange={(e) => setph_no(e.target.value)} name="phone no" id="phone no"
+                            <input type="phone" value={phno} onChange={(e) => setphno(e.target.value)} name="phone no" id="phone no"
 
                                 required />
                         </div>

@@ -1,62 +1,62 @@
-import React,{ useState } from 'react';
 import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Adminlogin.css';
-import {}from "react-router";
-import {Link} from "react-router-dom";
-import axios from 'axios';
-import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
+import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
 function Adminlogin() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-const [email, setemail] = useState('');
-const [ph_no, setph_no] = useState('');
+    const handleLogin = () => {
+        if (email.trim() === '' || password.trim() === '') {
+            setError('Please fill in all the fields.');
+            return;
+        }
 
+        if (email !== 'admin@manipal.edu' || password !== 'admin') {
+            setError('Invalid email or password.');
+            return;
+        }
 
-const handlechange = () =>
-{if (email.length !== 0 &&ph_no.length !== 0 ) {
-    const url = ''
+        // Perform any additional logic or API calls here
 
-    let fData = new FormData();
-    fData.append('email', email);
-    fData.append('ph_no', ph_no);
-    
+        navigate('/Dbmenu'); // Navigate to the Dbmenu page
+    };
 
-    axios.post(url, fData)
-        .then(response => alert(response.data))
-        .catch(error => alert(error));
-}
-
-}
-    
     return (
-
-        <><div className="sign">
-            <a href='/'> <img className='img7r' src={elogo} alt='logo1'/></a>
-        </div><div>
+        <>
+            <div className="sign">
+                <a href="/">
+                    <img className="img7r" src={elogo} alt="logo1" />
+                </a>
+            </div>
+            <div>
                 <main className="box3">
                     <form>
-                    <h3 className="pick">Admin Login</h3>
+                        <h3 className="pick">Admin Login</h3>
+                        {error && <p className="error">{error}</p>}
                         <div className="inputBox">
-                            <label htmlFor="Name">Email</label>
-                            <input type="text" value={email} onChange={(e) => setemail(e.target.value)} name="email" id="email"
-                                required />
+                            <label htmlFor="email">Email</label>
+                            <input type="text" value={email} onChange={e => setEmail(e.target.value)} name="email" id="email" required />
                         </div>
                         <div className="inputBox">
-                            <label htmlFor="phone"> Phone number</label>
-                            <input type="phone" value={ph_no} onChange={(e) => setph_no(e.target.value)} name="phone no" id="phone no"
-
-                                required />
+                            <label htmlFor="password">Password</label>
+                            <input type="password" value={password} onChange={e => setPassword(e.target.value)} name="password" id="password" required />
                         </div>
-                        <Link className="link1" to="/Dbmenu"><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>  
-
-                        <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
-        
+                        <button type="submit" onClick={handleLogin} name="" style={{ alignContent: "center" }}>Save</button>
+                        <Link className="link1" to="/" style={{ float: 'center' }}>
+                            <span className="login-span">Back to Home</span>
+                        </Link>
                     </form>
                 </main>
-            </div></>
-        
+            </div>
+        </>
     );
 }
 
 export default Adminlogin;
+
 

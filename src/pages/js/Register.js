@@ -1,74 +1,102 @@
-import React,{ useState } from 'react';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Register.css';
-import {}from "react-router";
-import {Link} from "react-router-dom";
+
+
+
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
+import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Register.css'
 
 function Register() {
+    const [name, setName] = useState('');
+    const [ph_no, setPhNo] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [error, setError] = useState('');
+    const navigate = useNavigate();
 
-    const [name, setname] = useState('');
-    const [ph_no, setph_no] = useState('');
-    const [email, setemail] = useState('');
-    const [pass, setpass] = useState('');
-    
-    
-    const handlechange = () =>
-    {if (name.length !== 0 &&ph_no.length !== 0 ) {
-        const url = 'http://localhost/add.php'
-    
-        let fData = new FormData();
-        fData.append('name', name);
-        fData.append('ph_no', ph_no);
-        fData.append('pass', pass);
-        fData.append('email', email);
+    const handleRegister = () => {
+        if (name.trim() === '' || ph_no.trim() === '' || email.trim() === '' || pass.trim() === '') {
+            setError('Please fill in all the fields.');
+            return;
+        }
 
-        axios.post(url, fData)
-            .then(response => alert(response.data))
+        if (!validatePhoneNumber(ph_no)) {
+            setError('Invalid phone number. Please enter a valid phone number.');
+            return;
+        }
+
+        if (!validateEmail(email)) {
+            setError('Invalid email address. Please enter a valid email address.');
+            return;
+        }
+
+        const url = 'http://localhost/add.php';
+
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('ph_no', ph_no);
+        formData.append('pass', pass);
+        formData.append('email', email);
+
+        axios
+            .post(url, formData)
+            .then(response => {
+                alert(response.data);
+                navigate('/Cp1');
+            })
             .catch(error => alert(error));
-    }
-    
-    }
-    
-    return (
+    };
 
-        <><div className="sign1">
-          
-            <a href='/'> <img className='img7r' src={elogo} alt='logo1'/></a>
-        </div><div>
+    const validatePhoneNumber = phoneNumber => {
+        const phoneNumberRegex = /^\d{10}$/;
+        return phoneNumberRegex.test(phoneNumber);
+    };
+
+    const validateEmail = email => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    };
+
+    return (
+        <>
+            <div className="sign1">
+                <a href="/">
+                    <img className="img7r" src={elogo} alt="logo1" />
+                </a>
+            </div>
+            <div>
                 <main className="box2">
                     <form>
-                    <h3 className="pick">Register your Details</h3>
+                        <h3 className="pick">Register your Details</h3>
+                        {error && <p className="error">{error}</p>}
                         <div className="inputBox">
                             <label htmlFor="Name">Name</label>
-                            <input type="text" value={name} onChange={(e) => setname(e.target.value)} name="Name" id="Name"
-                                required />
+                            <input type="text" value={name} onChange={e => setName(e.target.value)} name="Name" id="Name" required />
                         </div>
                         <div className="inputBox">
-                            <label htmlFor="phone"> Phone number</label>
-                            <input type="phone" value={ph_no} onChange={(e) => setph_no(e.target.value)} name="phone no" id="phone no"
-
-                                required />
+                            <label htmlFor="phone">Phone number</label>
+                            <input type="tel" value={ph_no} onChange={e => setPhNo(e.target.value)} name="phone" id="phone" required />
                         </div>
                         <div className="inputBox">
-                            <label htmlFor="Name">Email iD</label>
-                            <input type="email" value={email} onChange={(e) => setemail(e.target.value)} name="email" id="email"
-                                required />
+                            <label htmlFor="email">Email iD</label>
+                            <input type="email" value={email} onChange={e => setEmail(e.target.value)} name="email" id="email" required />
                         </div>
                         <div className="inputBox">
-                            <label htmlFor="phone"> Password</label>
-                            <input type="password" value={pass} onChange={(e) => setpass(e.target.value)} name="password" id="password"
-
-                                required />
+                            <label htmlFor="password">Password</label>
+                            <input type="password" value={pass} onChange={e => setPass(e.target.value)} name="password" id="password" required />
                         </div>
-                        <Link classname="link" to="/Cp1" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Register</button></Link>
 
-                        <Link className="link" to="/Login" style={{ float: "center" }}><span className="login-span">Already have an account</span></Link>
-        
+
+                        <Link className="Link" ><button type="submit" onClick={handleRegister} name="" style={{ alignContent: "center" }}>Save</button></Link>
+                        <Link className="link" to="/Login" style={{ float: 'center' }}>
+                            <span className="login-span">Already have an account</span>
+                        </Link>
                     </form>
                 </main>
+
             </div></>
-        
+
     );
 }
 
