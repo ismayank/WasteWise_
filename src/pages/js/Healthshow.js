@@ -31,6 +31,7 @@ class Healthshow extends Component {
               <th>Chemical</th>
               <th>Metal</th>
               <th>Glass</th>
+              <th>Total Cost</th>
             </tr>
           </thead>
           <tbody>
@@ -42,6 +43,7 @@ class Healthshow extends Component {
                 <td>{healthcare.chemical}</td>
                 <td>{healthcare.metal}</td>
                 <td>{healthcare.glass}</td>
+                <td>{healthcare.cost}</td>
               </tr>
             ))}
           </tbody>

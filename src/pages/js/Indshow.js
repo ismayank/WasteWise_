@@ -21,7 +21,7 @@ class Indshow extends Component {
     render() {
         return (
             <div className="table-responsive">
-               <h1 className='my-4'> Agriculture Waste Database</h1>
+               <h1 className='my-4'> Industrial Waste Database</h1>
                 <table className="table table-striped table-bordered">
                     <thead>
                         <tr>
@@ -34,6 +34,7 @@ class Indshow extends Component {
                             <th>E-waste</th>
                             <th>Glass</th>
                             <th>Hazardous</th>
+                            <th>Total Cost</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -48,6 +49,7 @@ class Indshow extends Component {
                                 <td>{industrial.ewaste}</td>
                                 <td>{industrial.glass}</td>
                                 <td>{industrial.hazardous}</td>
+                                <td>{industrial.cost}</td>
                             </tr>
                         ))}
                     </tbody>

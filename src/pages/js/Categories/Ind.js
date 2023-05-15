@@ -10,14 +10,14 @@ function Ind() {
 
 
 
-    const [biodegradable, setbiodegradable] = useState('');
-    const [chemical, setchemical] = useState('');
-    const [textile, settextile] = useState('');
-    const [plastic, setplastic] = useState('');
-    const [ewaste, setewaste] = useState('');
-    const [metal, setmetal] = useState('');
-    const [glass, setglass] = useState('');
-    const [hazardous, sethazardous] = useState('');
+    const [biodegradable, setbiodegradable] = useState('0');
+    const [chemical, setchemical] = useState('0');
+    const [textile, settextile] = useState('0');
+    const [plastic, setplastic] = useState('0');
+    const [ewaste, setewaste] = useState('0');
+    const [metal, setmetal] = useState('0');
+    const [glass, setglass] = useState('0');
+    const [hazardous, sethazardous] = useState('0');
 
 
 
@@ -48,7 +48,7 @@ function Ind() {
             <h1 className='name1'>Industrial waste</h1>
 
             <a href='/'> <img className='img1' src={elogo} alt='logo1' /></a>
-            <h2 className='name2'>Information </h2>
+        
         </div><div>
                 <main className="dombox2">
 
@@ -100,7 +100,7 @@ function Ind() {
 
 
 
-                        <Link classname="Link1" to="/Pay" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
+                        <Link className="Link" to="/Pay" ><button type="submit" onClick={handlechange} name="" style={{ alignContent: "center" }}>Save</button></Link>
 
                         <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
 

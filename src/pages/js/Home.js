@@ -27,6 +27,7 @@ function Home() {
                 <img className='img1r' src={mind} alt='logo1' />
                 <img className='img2r' src={aim} alt='logo1' />
                 <img className='img3r' src={leaf} alt='logo1' />
+                <img className='imgr9' src={leaf} alt='logo1' />
                 <img className='img4r' src={road} alt='logo1' />
 
             </div>
@@ -38,12 +39,16 @@ function Home() {
                 That's why we've made it easy to schedule pickups and track your waste management activity.</p>
             <p className="aim">The aim of this project is to establish an integrated waste management system that effectively collects</p>
             <p className="aim2"> separates, treats, and disposes of garbage waste from various sectors in an environmentally sustainable manner.</p>
+            <h3 className='obj'>Objective</h3>
             <p className="aim3">
-                The objective of this project is to oversee the collection, storage of different types of wastes such as domestic,</p>
-                 <p className="aim2">industrial etc. and how it is segregated for their effective treatment. </p>
+                The objective of this project is to oversee the collection, storage of different types of wastes </p>
+                 <p className="aim2">such as domestic,industrial etc. and how it is segregated for their effective treatment. </p>
                  <p className="aim2"> All these processes are carried out as environment friendly as possible, </p>
                  <p className="aim2">then these wastes are treated on basis of how useful and profitable they are in the market.
             </p>
+            <p className="aim2">Furthermore, the system employs advanced technologies and efficient practices to ensure</p>
+            <p className="aim2">  proper disposal of hazardous wastein compliance with environmental regulations, prioritizing </p>
+            <p className="aim2">    the safety of both the environment and the community.</p>
 
             <Footer /> {/* Add the Footer component at the bottom of the page */}
         </div>

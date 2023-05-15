@@ -11,11 +11,20 @@
   font-weight: 550;
   
 }
+.obj
+{
+  display: flex;
+  flex-direction: column;
+  margin-top: 6%;
+  font-family: 'Amatic SC',cursive;
+  font-weight: 900;
+  font-size: 5rem;
+
+}
 .ds {
   display: flex;
   flex-direction: column;
   margin-top: 25px;
-  ;
   font-family: 'Mali';
   font-weight: 700;
   font-size: 19px;
@@ -40,7 +49,7 @@
   display: flex;
   flex-direction: column;
   font-family: 'Mali';
-  margin-top: 12%;
+  margin-top: 4%;
   font-weight: 700;
   font-size: 19px;
 }
@@ -66,7 +75,7 @@
 
 .img1r {
   position: absolute;
-  top: 78%;
+  top: 86%;
   right: 2px;
   width: 33%;
 
@@ -94,6 +103,25 @@
 
 
 .img3r:hover {
+  transform: scale(1.2);
+
+
+}
+.imgr9 {
+  position: absolute;
+  top: 83%;
+  left: 17%;
+  width: 7.5%;
+  transition: transform .2s;
+  /* Animation */
+  transform: rotate(345deg);
+  transition-duration: 0.8s;
+
+
+}
+
+
+.imgr9:hover {
   transform: scale(1.2);
 
 
@@ -146,7 +174,7 @@
 }
 
 .menu a {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bolder;
   color: white;
   text-decoration: none;

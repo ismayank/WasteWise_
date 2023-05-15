@@ -8,12 +8,12 @@ import elogo from'/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/
 
 function Dom() {
     
-    const [food, setfood] = useState('');
-    const [plastic, setplastic] = useState('');
-    const [textile, settextile] = useState('');
-    const [glass, setglass] = useState('');
-    const [metal, setmetal] = useState('');
-    const [paper, setpaper] = useState('');
+    const [food, setfood] = useState('0');
+    const [plastic, setplastic] = useState('0');
+    const [textile, settextile] = useState('0');
+    const [glass, setglass] = useState('0');
+    const [metal, setmetal] = useState('0');
+    const [paper, setpaper] = useState('0');
 
 
     const handlechange = () => {
@@ -41,11 +41,12 @@ function Dom() {
     
     return (
 
-        <><div className="bg">
+        <>
             <h1 className='name1'>Domestic waste</h1>
           
             <a href='/'> <img className='img1' src={elogo} alt='logo1'/></a>
             {/* <h2 className='name2'>Information </h2> */}
+            <div className="bg5">
         </div><div>
         <main className="dombox">
 
@@ -87,7 +88,7 @@ function Dom() {
 
 
 
-    <Link classname="Link1" to="/Pay" ><button type="submit" onClick={handlechange}  name="" style={{ alignContent: "center" }}>Save</button></Link>
+    <Link className="Link" to="/Pay" ><button type="submit" onClick={handlechange}  name="" style={{ alignContent: "center" }}>Save</button></Link>
 
     <Link className="link1" to="/" style={{ float: "center" }}><span className="login-span">Back to Home</span></Link>
 
@@ -98,6 +99,8 @@ function Dom() {
         
     );
 }
+
+
 
 export default Dom;
 

@@ -13,9 +13,11 @@ if (mysqli_connect_error()) {
 }
 else {
     $email = $_POST['email'];
-    $ph_no = $_POST['ph_no'];
-    
-    $sql = "DELETE FROM ytTable where email='$email';";
+    $pass = $_POST['pass'];
+    date_default_timezone_set('Asia/Kolkata');
+    $datet = date('Y-m-d H:i:s');
+
+    $sql = "INSERT INTO login VALUES ('$email', '$pass', '$datet')";
     $res = mysqli_query($conn, $sql);
 
     if ($res) {
@@ -26,5 +28,4 @@ else {
     }
     $conn->close();
 }
-
 ?>

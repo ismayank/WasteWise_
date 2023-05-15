@@ -13,9 +13,9 @@ if (mysqli_connect_error()) {
 }
 else {
     $name = $_POST['name'];
-    $ph_no = $_POST['ph_no'];
+    $email = $_POST['email'];
     
-    $sql = "UPDATE ytTable SET name='$name', ph_no='$ph_no' WHERE name='MAYANK'";
+    $sql = "UPDATE ytTable SET name='$name' WHERE email='$email';";
     $res = mysqli_query($conn, $sql);
 
     if ($res) {

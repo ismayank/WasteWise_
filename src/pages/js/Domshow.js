@@ -32,6 +32,7 @@ class Domshow extends Component {
                             <th>Glass</th>
                             <th>Metal</th>
                             <th>Paper</th>
+                            <th>total cost</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,6 +45,7 @@ class Domshow extends Component {
                                 <td>{domestic.glass}</td>
                                 <td>{domestic.metal}</td>
                                 <td>{domestic.paper}</td>
+                                <td>{domestic.cost}</td>
                             </tr>
                         ))}
                     </tbody>

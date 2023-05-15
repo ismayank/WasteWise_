@@ -30,6 +30,7 @@ class Agrishow extends Component {
                             <th>Livestock</th>
                             <th>Plant</th>
                             <th>Wood</th>
+                            <th>Total Cost</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,6 +41,7 @@ class Agrishow extends Component {
                                 <td>{agricultural.livestock}</td>
                                 <td>{agricultural.plant}</td>
                                 <td>{agricultural.wood}</td>
+                                <td>{agricultural.cost}</td>
                             </tr>
                         ))}
                     </tbody>

@@ -12,6 +12,20 @@
     content: "\a";
     white-space: pre;
 }
+.pc2{
+  font-family: 'Mali';
+  font-size: 1.3rem;
+margin-left: 2%;
+text-decoration: none;
+color: rgb(0, 0, 0);
+white-space: pre;
+
+
+}
+.pc2::after{
+  content: "\a";
+  white-space: pre;
+}
 
 .tp{
 

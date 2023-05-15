@@ -33,7 +33,7 @@ function Dlpick() {
             <h3 className="pick">Delete Details</h3>
 
             <div className='inputBox'>
-              <label htmlFor="name">pid:</label>
+              <label htmlFor="name">Enter the Pickup ID: </label>
               <input type="text" id="name" value={pid} onChange={(e) => setpid(e.target.value)} />
             </div>
 

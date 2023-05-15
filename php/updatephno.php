@@ -12,10 +12,10 @@ if (mysqli_connect_error()) {
     exit();
 }
 else {
-    $email = $_POST['email'];
     $ph_no = $_POST['ph_no'];
+    $email = $_POST['email'];
     
-    $sql = "DELETE FROM ytTable where email='$email';";
+    $sql = "UPDATE ytTable SET ph_no='$ph_no' WHERE email='$email';";
     $res = mysqli_query($conn, $sql);
 
     if ($res) {
@@ -26,5 +26,4 @@ else {
     }
     $conn->close();
 }
-
 ?>

@@ -30,6 +30,7 @@ class Commshow extends Component {
                             <th>Chemical</th>
                             <th>Electrical</th>
                             <th>Demolition</th>
+                            <th>Total Cost</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,6 +41,7 @@ class Commshow extends Component {
                                 <td>{commercial.chemical}</td>
                                 <td>{commercial.electrical}</td>
                                 <td>{commercial.demolition}</td>
+                                <td>{commercial.cost}</td>
                             </tr>
                         ))}
                     </tbody>

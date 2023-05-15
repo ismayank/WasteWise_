@@ -12,10 +12,9 @@ if (mysqli_connect_error()) {
     exit();
 }
 else {
-    $email = $_POST['email'];
-    $ph_no = $_POST['ph_no'];
-    
-    $sql = "DELETE FROM ytTable where email='$email';";
+    $pid = $_POST['pid'];
+       
+    $sql = "DELETE FROM pickup where pid='$pid';";
     $res = mysqli_query($conn, $sql);
 
     if ($res) {

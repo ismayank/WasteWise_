@@ -1,75 +1,57 @@
-.name1{
-    font-family: 'Montserrat';
-    font-size: 4rem;
-  margin : 2%;
-}
-
-.name2{
-    font-family: 'Montserrat';
-    font-size: 2rem;
-  margin : 2%;
-}
-.img1 {
-    position: absolute;
-    top: 4%;
-    right: 5%;
-
-    width: 10%;
-
-    transition: transform .2s;
-    /* Animation */
-    transform: rotate(45deg);
-    transition-duration: 0.8s;
-
-}
-
-.img1:hover {
-    transform: scale(1.2);
 
 
-}
-.pc{
-    font-family: 'Montserrat';
-    font-size: 2rem;
-  margin : 2%;
-  text-decoration: none;
-  color: green;
-
-}
-.pc:hover{
-    opacity: 0.9;
-}
-
-.bg {
-
-    background: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-bg.jpg") repeat-y center center/cover fixed;
-  
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow: auto;
-  
-    position: absolute;
-    top: 0;
-    left: 0;
+.sign1{
+    /* Background part */
+    
+    position: absolute; 
     width: 100%;
     height: 100%;
-    opacity: 1;
-    z-index: -1;
-    backface-visibility: visible;
-    font-family: 'Montserrat';
-    font-size: 22px;
-    scroll-behavior: smooth;
-  
-  }
+    background-image: url("/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/bicycle-doodle-set-2D9Y49D.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    justify-content: center;
 
-  .dombox3 {
+
+}
+.img6r {
+    position: absolute;
+    bottom:1%;
+    right: 2%;
+   
+    width: 20%;
+
+  }
+  .img7r {
+    position: absolute;
+    top:4%;
+    left: 5%;
+   
+    width: 10%;
+
+  }
+.h3{
+    font-family: 'Montserrat';
+}
+
+.pick{
+    /* Signup title */
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #FFFFFF;
+    margin-top: 6%;
+    margin-bottom: 14%;
+} 
+
+.box3 {
     /* Box part */
     background-color: #54B56A;
    
     position: absolute;
-    left: 34%;
+    left: 35%;
     padding: 10px;
-    top: 20%;
+    top: 9%;
     border-radius: 10px;
     font-family: 'Montserrat';
 
@@ -79,14 +61,14 @@ mix-blend-mode: normal;
 border: 4px solid #CBE9FF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 30px;
-width: 35%;
-height: 107%;
+width: 36%;
+height: 80%;
 }
 
 .link{
     /* already signup */
     font-family: 'Montserrat';
-    font-style: bold;
+    font-style: italic;
     font-weight: 700;
     font-size: 1.52rem;
     line-height: 120%;
@@ -101,7 +83,7 @@ height: 107%;
     
 }
 
-.dombox3 .inputBox label {
+.box3 .inputBox label {
 /* email,name,password -title */
 font-family: 'Montserrat';
 font-style: normal;
@@ -119,7 +101,7 @@ color: #FFFFFF;
 }
 
 
-.dombox3 .inputBox input {
+.box3 .inputBox input {
     /* inputpart for email-password-name */
     background: transparent;
     font-family: 'Montserrat';
@@ -136,11 +118,11 @@ mix-blend-mode: normal;
 border: 4px solid #FFFFFF;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
-    text-decoration: none;
+    
 }
 
 
-.dombox3 input[type="submit"], .dombox3 button[type="submit"], a.button {
+.box3 input[type="submit"], .box3 button[type="submit"], a.button {
     /* signup button */
 font-family: 'Montserrat';
 margin: auto;
@@ -163,12 +145,15 @@ justify-content: center;
 text-decoration: none;
 
 
-
     
 }
 
-.dombox3 input[type="submit"]:hover, .dombox3 button[type="submit"]:hover, a.button:hover {
+.box3 input[type="submit"]:hover, .box3 button[type="submit"]:hover, a.button:hover {
     opacity: 0.8;
 
 
+}
+@media only screen and (max-width:500px){
+
+    
 }

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Register.css';
+import '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/css/Login.css';
 import elogo from '/Applications/XAMPP/xamppfiles/htdocs/wastewise/wastewise/src/pages/image/images-small-globe.svg';
 
 function Login() {
@@ -59,7 +59,7 @@ function Login() {
         </a>
       </div>
       <div>
-        <main className="box2">
+        <main className="box3">
           <form>
             <h3 className="pick">Login your Details</h3>
             {error && <div className="error">{error}</div>}
@@ -94,10 +94,13 @@ function Login() {
             >
               Login
             </button>
-
+            <Link className="link" to="/Updpass2" style={{ float: 'center' }}>
+              <span className="login-span">Forgot Password?</span>
+            </Link>
             <Link className="link" to="/Register" style={{ float: 'center' }}>
               <span className="login-span">Don't have an account?</span>
             </Link>
+            
           </form>
         </main>
       </div>

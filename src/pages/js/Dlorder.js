@@ -33,8 +33,8 @@ function Dlorder() {
             <h3 className="pick">Delete Details</h3>
 
             <div className='inputBox'>
-              <label htmlFor="name">o_id:</label>
-              <input type="text" id="name" value={o_id} onChange={(e) => seto_id(e.target.value)} />
+              <label htmlFor="name">Enter the Order ID:</label>
+              <input type="text" id="name" value={o_id} onChange={(e) => seto_id(e.target.value)}  />
             </div>
 
         

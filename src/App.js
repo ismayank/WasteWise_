@@ -36,6 +36,8 @@ import Updpass from "./pages/js/Updpass";
 import Updphno from "./pages/js/Updphno";
 import Dlpick from "./pages/js/Dlpick";
 import Dlorder from "./pages/js/Dlorder";
+import Updpass2 from "./pages/js/Updpass2";
+
 
 
 
@@ -81,6 +83,8 @@ return(
       <Route path="/Updphno" element={<Updphno/>}/>
       <Route path="/Dlpick" element={<Dlpick/>}/>
       <Route path="/Dlorder" element={<Dlorder/>}/>
+      <Route path="/Updpass2" element={<Updpass2/>}/>
+      
       
       
       

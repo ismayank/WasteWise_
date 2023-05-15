@@ -12,19 +12,18 @@ if (mysqli_connect_error()) {
     exit();
 }
 else {
+    $pass = $_POST['pass'];
     $email = $_POST['email'];
-    $ph_no = $_POST['ph_no'];
     
-    $sql = "DELETE FROM ytTable where email='$email';";
+    $sql = "UPDATE ytTable SET pass='$pass' WHERE email='$email';";
     $res = mysqli_query($conn, $sql);
 
     if ($res) {
-        echo "Success";
-    }
+        echo "procedure created successfully";
+            }
     else {
         echo "Error!";
     }
     $conn->close();
 }
-
 ?>

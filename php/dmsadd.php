@@ -19,18 +19,33 @@ else {
     $metal = $_POST['metal'];
     $paper = $_POST['paper'];
 
+    // Retrieve the latest pid from the pickup table
+    $sql = "SELECT pid FROM pickup ORDER BY pid DESC LIMIT 1";
+    $result = mysqli_query($conn, $sql);
 
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $latestPid = $row['pid'];
 
+        // Calculate the total cost
+        $totalCost = ($food + $plastic + $textile + $glass + $metal + $paper) * 10;
 
-    $sql = "INSERT INTO domestic (food, plastic, textile, glass, metal, paper) VALUES ('$food', '$plastic', '$textile', '$glass', '$metal', '$paper')";
-    $res = mysqli_query($conn, $sql);
+        // Update the cost in the domestic table
+//        $sql = "UPDATE domestic SET cost = '$totalCost' WHERE pid = '$latestPid'";
+        $sql = "INSERT INTO domestic VALUES ('$latestPid', '$food', '$plastic', '$textile', '$glass', '$metal', '$paper','$totalCost')";
+        $updateRes = mysqli_query($conn, $sql);
 
-    if ($res) {
-        echo "Success";
+        if ($updateRes) {
+            echo "Please Pay $totalCost to Confirm your pickup ";
+        }
+        else {
+            echo "Error updating the cost!";
+        }
     }
     else {
-        echo "Error!";
+        echo "Error retrieving the latest pid";
     }
+
     $conn->close();
 }
 ?>

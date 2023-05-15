@@ -10,23 +10,36 @@ $conn = new mysqli($host, $user, $password, $database);
 if (mysqli_connect_error()) {
     echo mysqli_connect_error();
     exit();
-}
-else {
+} else {
     $biodegradable = $_POST['biodegradable'];
     $chemical = $_POST['chemical'];
     $electrical = $_POST['electrical'];
     $demolition = $_POST['demolition'];
 
-    $sql = "INSERT INTO commercial (biodegradable, chemical, electrical, demolition) VALUES ('$biodegradable', '$chemical', '$electrical', '$demolition')";
-    
-    $res = mysqli_query($conn, $sql);
+    // Retrieve the latest pid from the pickup table
+    $sql = "SELECT pid FROM pickup ORDER BY pid DESC LIMIT 1";
+    $result = mysqli_query($conn, $sql);
 
-    if ($res) {
-        echo "Success";
+    if ($result && mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $latestPid = $row['pid'];
+
+        // Calculate the total cost
+        $totalCost = ($biodegradable + $chemical + $electrical + $demolition) * 12;
+
+        // Update the cost in the commercial table
+        $sql = "INSERT INTO commercial VALUES ('$latestPid', '$biodegradable', '$chemical', '$electrical', '$demolition', '$totalCost')";
+        $updateRes = mysqli_query($conn, $sql);
+
+        if ($updateRes) {
+            echo "Please Pay $totalCost to Confirm your pickup";
+        } else {
+            echo "Error updating the cost!";
+        }
+    } else {
+        echo "Error retrieving the latest pid";
     }
-    else {
-        echo "Error!";
-    }
+
     $conn->close();
 }
 ?>
